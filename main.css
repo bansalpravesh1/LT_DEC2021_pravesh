@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Times New Roman", Times, serif;
+}
+
+header{
+  background-color: red;
+  height: 60px;
+}
+/* nav bar csss*/
+nav{
+   overflow: hidden;
+   position: fixed;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width:100%;
+   height:60px;
+   background: linear-gradient(360deg, rgba(229, 172, 142, 0), hsla(0, 0%, 100%, .5) 50%, rgba(229, 172, 142, 0));;
+}
+.logo{
+cursor: pointer;
+}
+
+#image{
+height: 50px;
+width:220px;
+margin-left:10px;
+margin-top: 5px;
+}
+
+.pages{
+
+}
+.pages ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:inherit;
+}
+.pages li{
+  float: left;
+}
+.pages li a{
+  text-align: center;
+  display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.pages li a:hover {
+  background-color: #111;
+}
+
+.buttons{
+  padding:0;
+  cursor: pointer;
+}
+.trial {
+    padding: 7px;
+    background-color: orange;
+    color: black;
+    box-shadow: none;
+    border: none;
+    border-radius: .375rem;
+    height: 2.5rem;
+    width: 15rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes moveAfter {
+  to {
+      transform: rotate(60deg) translate(0em, -5em)
+  }
+}
+  .buttons .trial:after {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: moveAfter;
+    animation-timing-function: linear;
+    background: linear-gradient(180deg, rgba(229, 172, 142, 0), hsla(0, 0%, 100%, .5) 50%, rgba(229, 172, 142, 0));
+    bottom: 10%;
+    content: "";
+    left: 1%;
+    position: absolute;
+    right: -50%;
+    top: -50%;
+    transform: rotate(60deg) translate(-5em, 7.5em);
+}
+
+/* body*/
+section{
+  background-color: green;
+  height: 540px;
+}
+
+/* footer css */
+footer{
+  background-color: black;
+  height:200px;
+}
+.footer_logo{
+  color: white;
+  height: 10px;
+}
+#image2{
+  margin-top: 10px;
+margin-left: 10px;
+}
+
+.social_media ul{
+  list-style-type: none;
+  width: 20%;
+  overflow: hidden;
+  background-color: inherit;
+  margin-left: 3em;
+}
+.social_media li{
+  float: left;
+}
+.social_media li a{
+display: block;
+text-align: center;
+padding: 14px 14px;
+text-decoration: none;
+}
+h1{
+  color : red;
+}
+.quick_links{
+  float: left;
+  margin-left: 35%;
+  padding: 10px 50px;
+}
+.quick_links ul{
+ margin-top: 1em;
+}
+.quick_links li{
+ padding: 5px 0px;
+}
+.quick_links li a{
+  text-decoration: none;
+}
+.Services{
+  float: left;
+  color: red;
+
+  padding: 10px 50px;
+}
+.Services ul{
+  list-style-type: none;
+  margin-top: 1em;
+}
+.Services li{
+ padding: 5px 0px;
+}
+.Services li a{
+  text-decoration: none;
+}
+.Contact{
+  color: red;
+  margin-top: 10px;
+}
+.Contact ul{
+  list-style-type: none;
+  margin-top: 1em;
+}
+.Contact li{
+ padding: 5px 0px;
+}
+.Contact li a{
+  text-decoration: none;
+}
+
+/* responsive css */
+
+
+nav .menu-btn i{
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 900px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+}
+  nav .pages ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: blue;
+    top:80px;
+    left: 0;
+    text-align: center;
+    transition: all .5s ease;
+  }
+  #click:checked ~ .pages ul{
+    left 0;
+  }
+  nav .pages ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav .pages ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ .pages ul li a{
+   margin-left: 0px;
+ }
+}
